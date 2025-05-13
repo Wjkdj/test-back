@@ -18,14 +18,14 @@ public class RestaurantController {
 
     @PostMapping
     public ResponseEntity<ResponseDto<RestaurantResponseDto>> createRestaurant(@Valid @RequestBody RestaurantResponseDto dto){
-        ResponseDto<RestaurantResponseDto> restaurnat = restaurantService.createRestaurant(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(restaurnat);
+        ResponseDto<RestaurantResponseDto> restaurant = restaurantService.createRestaurant(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(restaurant);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDto<RestaurantResponseDto>> getRestaurantById(@PathVariable Long id){
-        ResponseDto<RestaurantResponseDto> restaurnat = restaurantService.getRestaurantById(id);
-        return ResponseEntity.status(HttpStatus.OK).body(restaurnat);
+        ResponseDto<RestaurantResponseDto> restaurant = restaurantService.getRestaurantById(id);
+        return ResponseEntity.status(HttpStatus.OK).body(restaurant);
     }
 
     @GetMapping
